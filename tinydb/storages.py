@@ -4,7 +4,10 @@ implementations.
 """
 
 import io
-import json
+try:
+    import ujson as json
+except ModuleNotFoundError:
+    import json
 import os
 from abc import ABC, abstractmethod
 from typing import Dict, Any, Optional
